@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilinnyala</title>
+    <title>Alin Portofolio</title>
+
+    <!-- Logoku -->
+    <link rel="icon" href="public/images/logo.svg" type="image/svg+xml" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Style Customku :D -->
+    <link rel="stylesheet" href="public/css/style.css" />
+    
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <p>xDD</p>
+
+    <!-- KANVAS UNTUK EFEK PARTIKEL INTERAKTIF -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- WRAPPER AGAR KONTEN BERADA DI ATAS KANVAS -->
+    <div class="content-wrapper">
+        
+        <!-- GLASS NAV -->
+        <nav>
+            <a href="#home"><i class="ph ph-house"></i> Home</a>
+            <a href="#about"><i class="ph ph-user"></i> Tentang</a>
+            <a href="#projects"><i class="ph ph-folder-star"></i> Pengalaman</a>
+            <a href="#contact"><i class="ph ph-paper-plane-tilt"></i> Kontak</a>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section id="home">
+            <div class="hero-text reveal">
+                <h1>Halo, Saya <br>Laila Kamal Amalina</h1>
+                <div class="typewriter-box">
+                    <span id="typewriter" class="typewriter-text"></span>
+                </div>
+                <p style="margin-bottom: 30px; color: var(--text-muted);">Seorang pembelajar yang suka menghubungkan sains, kreativitas, dan teknologi menjadi sesuatu yang nyata.</p>
+                <a href="#projects" class="btn"><i class="ph ph-magic-wand"></i> Pengalaman Saya</a>
+            </div>
+            <div class="hero-img reveal">
+                <img src="public\images\profil.jpeg" alt="Profile Alin">
+            </div>
+        </section>
+
+        <!-- ABOUT & SKILLS SECTION -->
+        <section id="about">
+            <h2 class="section-title reveal"><i class="ph ph-sparkle"></i> Tentang & Keahlian</h2>
+            <div class="about-grid">
+                <div class="glass-card reveal">
+                    <h3>Kenali Saya Lebih Jauh</h3>
+                    <p style="margin-top: 15px; color: var(--text-muted);">Saya adalah pembelajar yang suka menjelajahi banyak hal, dari sains, seni, sampai teknologi. Sebagai mahasiswa Teknik Kimia yang tertarik pada frontend, saya senang mengubah rasa ingin tahu menjadi karya digital yang rapi dan bermakna.</p>
+                    <br>
+                    <p style="color: var(--text-muted);">Bagi saya, setiap proyek adalah ruang untuk belajar, merapikan ide, dan membuat sesuatu yang benar-benar bisa digunakan.</p>
+                </div>
+                
+                <div class="reveal">
+                    <h3>Teknologi Favorit</h3>
+                    <div class="skills-container">
+                        <div class="skill-chip"><i class="ph ph-terminal"></i> Python</div>
+                        <div class="skill-chip"><i class="ph ph-brackets-curly"></i> C++</div>
+                        <div class="skill-chip"><i class="ph ph-file-html"></i> HTML5</div>
+                        <div class="skill-chip"><i class="ph ph-file-css"></i> CSS3 / SCSS</div>
+                        <div class="skill-chip"><i class="ph ph-file-js"></i> JavaScript</div>
+                    </div>
+                    <br>
+                    <h3>Karakter Kerja</h3>
+                    <div class="skills-container">
+                        <div class="skill-chip"><i class="ph ph-lightbulb"></i> Problem Solver</div>
+                        <div class="skill-chip"><i class="ph ph-chat-centered-text"></i> Communication</div>
+                        <div class="skill-chip"><i class="ph ph-users"></i> Teamwork</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2 class="section-title reveal"><i class="ph ph-squares-four"></i> Pengalaman Saya</h2>
+            <div class="project-grid">
+                <div class="project-card reveal">
+                    <img src="public\images\DA Nusayabara.jpeg" alt="Organisasi" class="project-img">
+                    <div class="project-info">
+                        <h3>Dewan Ambalan Nusaybara 2023/2024</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Menjadi Juru Uang Dewan Ambalan Nusaybara 2023/2024</p>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="transition-delay: 0.1s;">
+                    <img src="public\images\KTI UI.jpeg" alt="KTI UI" class="project-img">
+                    <div class="project-info">
+                        <h3>Juara 1 Chemistry Innovation Project 2024</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Meraih Juara 1 Chemistry Innovation Project di Chemistry Fair UI 2024 Tingkat Nasional</p>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="transition-delay: 0.2s;">
+                    <img src="public\images\KBS.jpeg" alt="KBS Infor" class="project-img">
+                    <div class="project-info">
+                        <h3>Juara 2 OSN Informatika</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Meraih Juara 2 OSN Informatika SMA/MA Tingkat Kota Pekalongan 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="glass-card reveal" style="max-width: 700px; width: 100%;">
+                <h2 class="section-title" style="justify-content: center; margin-bottom: 20px;"><i class="ph ph-coffee"></i> Mari Berkolaborasi</h2>
+                <p style="color: var(--text-muted);">Tertarik untuk bekerja sama atau sekadar menyapa? Kotak masuk saya selalu terbuka. Mari wujudkan ide luar biasa bersama.</p>
+                
+                <div class="social-links">
+                    <a href="mailto:l.kamalamalina@gmail.com?subject=P&body=Hai%20Laila,%20aku%20ingin%20bertanya" class="social-btn" title="Email"><i class="ph ph-envelope-simple"></i></a>
+
+                    <a href="https://www.linkedin.com/in/laila-kamal-amalina-212915335/" target="_blank" class="social-btn" title="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/StayKiss" target="_blank" class="social-btn" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://www.instagram.com/aw.lilinnyanyala" target="_blank" class="social-btn" title="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+                
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Laila Kamal Amalina. Desain dengan Cinta</p>
+        </footer>
+
+    </div> <!-- Akhir dari content-wrapper -->
+
+    <!-- JAVASCRIPT MAIN -->
+    <script src="public/js/main.js"></script>
 </body>
 </html>
